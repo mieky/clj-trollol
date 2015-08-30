@@ -10,7 +10,7 @@ With [leiningen](http://leiningen.org/) installed:
 
 ```
 cp cards.debug.json.example cards.debug.json
-lein run
+KEY=my_key TOKEN=my_token BOARD=my_board lein run
 ```
 
 ## TODO

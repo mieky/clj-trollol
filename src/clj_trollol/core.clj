@@ -5,9 +5,11 @@
 (defn read-json-file [name]
     (json/read-str (slurp name) :key-fn keyword))
 
-(defn get-list-name
-  [boardId]
-  )
+(defn read-secrets
+  "Read API secrets from environment variables"
+  []
+  {:key   (System/getenv "KEY")
+   :token (System/getenv "TOKEN")})
 
 (defn filter-props
   "Get only those properties we need"
@@ -23,12 +25,23 @@
     #(assoc {} (key %) (count (second %)))
     (group-by :idList cards)))
 
-(defn -main
-  "Read cards and output a JSON summary of their lists"
-  [& args]
+(defn print-usage "" []
+  (println "Please pass KEY and TOKEN as environment variables."))
+
+(defn fetch-cards
+  "Fetch cards"
+  []
   (json/pprint (->
       (read-json-file "cards.debug.json")
       (filter-props)
       (get-list-ids)
       (json/write-str)
       )))
+
+(defn -main
+  "Read cards and output a JSON summary of their lists"
+  [& args]
+  (let [secrets (read-secrets)]
+      (if (or (nil? (:key secrets)) (nil? (:token secrets)))
+        (print-usage)
+        (fetch-cards))))

@@ -4,10 +4,19 @@ Read cards from Trello and print summaries.
 
 A Clojure equivalent of [trollol](https://github.com/mieky/trollol), mostly for learning purposes.
 
+## Usage
+
+With [leiningen](http://leiningen.org/) installed:
+
+```
+cp cards.debug.json.example cards.debug.json
+lein run
+```
+
 ## TODO
 
-- [ ] make secrets configurable
 - [ ] actually fetch data from Trello
+- [ ] make secrets configurable
 - [ ] respond via API
 - [ ] make deployable to Heroku
 - [ ] set up Travis build

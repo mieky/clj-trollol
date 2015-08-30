@@ -1,6 +1,16 @@
 # clj-trollol
 
-printing out some trello summaries.
+Read cards from Trello and print summaries.
+
+A Clojure equivalent of [trollol](https://github.com/mieky/trollol), mostly for learning purposes.
+
+## TODO
+
+- [ ] make secrets configurable
+- [ ] actually fetch data from Trello
+- [ ] respond via API
+- [ ] make deployable to Heroku
+- [ ] set up Travis build
 
 ## Acknowledgements
 

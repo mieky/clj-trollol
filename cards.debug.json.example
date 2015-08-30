@@ -1,11 +1,11 @@
 [
-    { "idList": 1 },
-    { "idList": 1 },
-    { "idList": 2 },
-    { "idList": 3 },
-    { "idList": 3 },
-    { "idList": 3 },
-    { "idList": 4 },
-    { "idList": 4 },
-    { "idList": 5 }
+    { "idList": 1, "idLabels": ["a"] },
+    { "idList": 1, "idLabels": [] },
+    { "idList": 2, "idLabels": ["b"] },
+    { "idList": 3, "idLabels": [] },
+    { "idList": 3, "idLabels": [] },
+    { "idList": 3, "idLabels": [] },
+    { "idList": 4, "idLabels": [] },
+    { "idList": 4, "idLabels": [] },
+    { "idList": 5, "idLabels": [] }
 ]

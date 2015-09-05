@@ -10,13 +10,12 @@ With [leiningen](http://leiningen.org/) installed:
 
 ```
 cp cards.debug.json.example cards.debug.json
-KEY=my_key TOKEN=my_token BOARD=my_board lein run
+cp config.json.example config.json
+LOCAL=yessir KEY=my_key TOKEN=my_token BOARD=my_board lein run
 ```
 
 ## TODO
 
-- [ ] actually fetch data from Trello
-- [ ] make secrets configurable
 - [ ] respond via API
 - [ ] make deployable to Heroku
 - [ ] set up Travis build

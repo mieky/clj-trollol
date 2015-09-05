@@ -6,7 +6,9 @@
   :dependencies [
     [org.clojure/clojure "1.6.0"]
     [org.clojure/data.json "0.2.6"]
-    [clj-http "2.0.0"]]
-  :main ^:skip-aot clj-trollol.core
+    [clj-http "2.0.0"]
+    [compojure "1.1.8"]
+    [http-kit "2.1.15"]]
+  :main ^:skip-aot trollol.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

@@ -7,7 +7,11 @@
   (some? (System/getenv "LOCAL")))
 
 (defn read-list-names []
-  (json/read-str (slurp "config.json")))
+  (let [config-file "config.json"]
+    (json/read-str
+     (if (.exists (clojure.java.io/as-file config-file))
+       (slurp config-file)
+       (System/getenv "CONFIG")))))
 
 (defn convert-ids-to-names
   [keys-with-ids]

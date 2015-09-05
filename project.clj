@@ -11,5 +11,6 @@
     [http-kit "2.1.15"]]
   :main ^:skip-aot trollol.core
   :uberjar-name "trollol-standalone.jar"
+  :min-lein-version "2.5.1"
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

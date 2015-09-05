@@ -17,6 +17,12 @@
 (defn cards-as-json []
   (json/write-str (mangler/fetch-cards (read-secrets))))
 
+(defn get-server-port []
+  (let [port (System/getenv "PORT")]
+    (if (nil? port)
+      5000
+      (Integer/parseInt port))))
+
 (defroutes trollol
   (GET "/api/funnel" req (cards-as-json)))
       
@@ -27,6 +33,5 @@
       (if (or (nil? (:key secrets)) (nil? (:token secrets)))
         (print-usage)
         ;(json/pprint (mangler/fetch-cards secrets))
-        (run-server trollol {:port 5000})
+        (run-server trollol {:port (get-server-port)})
         )))
-

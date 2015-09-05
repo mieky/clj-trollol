@@ -16,7 +16,6 @@ LOCAL=yessir KEY=my_key TOKEN=my_token BOARD=my_board lein run
 
 ## TODO
 
-- [ ] respond via API
 - [ ] make deployable to Heroku
 - [ ] set up Travis build
 

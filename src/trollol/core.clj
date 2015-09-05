@@ -2,7 +2,8 @@
   (:require [clojure.data.json :as json]
             [compojure.core :refer :all]
             [org.httpkit.server :refer [run-server]]
-            [trollol.mangler :as mangler]))
+            [trollol.mangler :as mangler])
+  (:gen-class))
 
 (defn read-secrets
   "Read API secrets from environment variables"

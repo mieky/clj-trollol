@@ -1,4 +1,4 @@
-(defproject clj-trollol "0.1.0-SNAPSHOT"
+(defproject trollol "0.1.0"
   :description "printing out some trello summaries"
   :url "https://github.com/mieky/clj-trollol"
   :license {:name "MIT"
@@ -10,5 +10,6 @@
     [compojure "1.1.8"]
     [http-kit "2.1.15"]]
   :main ^:skip-aot trollol.core
+  :uberjar-name "trollol-standalone.jar"
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

@@ -24,8 +24,13 @@
       5000
       (Integer/parseInt port))))
 
+(defn json-response [data]
+  {:status  200
+   :headers {"Content-Type" "application/json; charset=utf-8"}
+   :body    data})
+
 (defroutes trollol
-  (GET "/api/funnel" req (cards-as-json)))
+  (GET "/api/funnel" req (json-response (cards-as-json))))
       
 (defn -main
   "Read cards and output a JSON summary of their lists"
